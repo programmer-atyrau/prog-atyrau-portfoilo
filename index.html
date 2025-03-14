@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        /* Анимация для карточек услуг */
+        .service-card:hover {
+            transform: translateY(-10px);
+            transition: transform 0.3s ease;
+        }
+        /* Горизонтальная прокрутка отзывов */
+        .reviews-container {
+            overflow-x: auto;
+            scroll-behavior: smooth;
+        }
+        .reviews-container::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300">
+<!-- Шапка -->
+<header class="p-4 shadow-md bg-blue">
+    <div class="container mx-auto flex justify-between md-logo items-center">
+        <!-- Логотип -->
+        <div class="text-2xl font-bold">
+            <img src="assets/images/logo/prog.atyrau.png" width="130"  alt="Здесь логотип сайта">
+        </div>
+        <!-- Навигация -->
+        <nav class="hidden md:flex space-x-6 white-text ">
+            <a href="#" class="hover:text-gray-400">Главная</a>
+            <a href="#services" class="hover:text-gray-400">Услуги</a>
+            <a href="#reviews" class="hover:text-gray-400">Отзывы</a>
+            <a href="#contact" class="hover:text-gray-400">Контакты</a>
+        </nav>
+    </div>
+</header>
+
+<!-- Секция "О нас" -->
+<section class="py-12 mt-40">
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <!-- Текст слева -->
+            <div class="text-center md:text-left">
+                <h2 class="text-3xl font-bold mb-4">Біз туралы</h2>
+                <p class="text-lg mb-4">
+                    Біз сіздің идеяларыңызды шынайы жобаларға айналдыруға көмектесеміз!<br>🌟 Веб-сайттар, ойындар, бағдарламалау скрипттері, презентациялар және видео монтаж – барлығын сапалы әрі жылдам жасаймыз.
+                    <br>Мұғалімдер мен студенттерге ыңғайлы шешімдер ұсынып, уақытыңызды үнемдеуге көмектесеміз.<br>Егер сізде уақыт жетіспесе немесе идеяңызды жүзеге асыруға қолдау қажет болса, бізбен хабарласыңыз! 🚀
+                </p>
+                <p class="text-lg mb-4">
+                    Мы используем передовые технологии и инструменты, чтобы обеспечить высокое качество наших услуг.
+                </p>
+                <button class="px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <a href="#contact-form">Узнать больше</a>
+                </button>
+            </div>
+            <!-- Фото справа -->
+            <div class="flex justify-center md:justify-end">
+                <img
+                        src="assets/images/stock/pexels-danny-meneses-340146-943096.jpg"
+                        alt="О нас"
+                        class="w-full max-w-md rounded-lg shadow-lg"
+                >
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Секция "Услуги" -->
+<section id="services" class="py-12 mt-40">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-8 font-black">Услуги</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Карточка услуги 1 -->
+            <div class="service-card bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl">
+                <h3 class="text-xl font-bold mb-2">Медиа</h3>
+                <p class="text-gray-600 dark:text-gray-300">Афиша (Шақырту жасау), Видео монтаждау дайын исходниктермен</p>
+            </div>
+            <!-- Карточка услуги 2 -->
+            <div class="service-card bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl">
+                <h3 class="text-xl font-bold mb-2">Разработка</h3>
+                <p class="text-gray-600 dark:text-gray-300">Проект және IT-саласына кіретін кішігірім проект старттап-тарға ұсыныс қабылдау</p>
+            </div>
+            <!-- Карточка услуги 3 -->
+            <div class="service-card bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl">
+                <h3 class="text-xl font-bold mb-2">Документ</h3>
+                <p class="text-gray-600 dark:text-gray-300">Курсовое, Диплом қорғау, <b>Слайд Презентация</b> жасау және т.б</p>
+            </div>
+            <!-- Карточка услуги 4 -->
+            <div class="service-card bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl">
+                <h3 class="text-xl font-bold mb-2">Поддержка</h3>
+                <p class="text-gray-600 dark:text-gray-300">Техническая поддержка и обслуживание.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Секция "Программы" -->
+<section class="py-12 mt-40">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-8">Біз қолданатын қосымшалар</h2>
+        <!-- Сетка с программами -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Карточка 1 -->
+            <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                <img src="assets/images/svg/visual-studio-code-1.svg" alt="Программа 1" class="w-24 h-24 mx-auto mb-4">
+                <h3 class="text-xl font-bold text-center">Visual Studio Code</h3>
+            </div>
+            <!-- Карточка 2 -->
+            <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                <img src="assets/images/svg/figma-icon.svg" alt="Программа 2" class="w-24 h-24 mx-auto mb-4">
+                <h3 class="text-xl font-bold text-center">Figma</h3>
+            </div>
+            <!-- Карточка 3 -->
+            <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                <img src="assets/images/svg/adobe-photoshop-2.svg" alt="Программа 3" class="w-24 h-24 mx-auto mb-4">
+                <h3 class="text-xl font-bold text-center">Photoshop</h3>
+            </div>
+            <!-- Карточка 4 -->
+            <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                <img src="assets/images/svg/after-effects-1.svg" alt="Программа 4" class="w-24 h-24 mx-auto mb-4">
+                <h3 class="text-xl font-bold text-center">After Effects</h3>
+            </div>
+            <!-- Карточка 5 -->
+            <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                <img src="assets/images/svg/adobe-illustrator-cc-3.svg" alt="Программа 5" class="w-24 h-24 mx-auto mb-4">
+                <h3 class="text-xl font-bold text-center">Adobe Illustrator</h3>
+            </div>
+            <!-- Карточка 6 -->
+            <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                <img src="assets/images/svg/telegram-2019-logo.svg" alt="Программа 6" class="w-24 h-24 mx-auto mb-4">
+                <h3 class="text-xl font-bold text-center">Telegram</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Секция "Отзывы" -->
+<section id="reviews" class="py-12 bg-gray-100 dark:bg-gray-800 mt-40">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-8">Отзывы</h2>
+        <div class="reviews-container flex space-x-4 overflow-x-auto">
+            <!-- Отзыв 1 -->
+            <div class="min-w-[300px] bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md">
+                <p class="text-gray-600 dark:text-gray-300">"Отличный сервис! Быстро и качественно выполнили заказ."</p>
+                <p class="mt-4 font-bold">Admin</p>
+            </div>
+            <!-- Отзыв 2 -->
+            <div class="min-w-[300px] bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md">
+                <p class="text-gray-600 dark:text-gray-300">"Профессиональный подход и внимание к деталям."</p>
+                <p class="mt-4 font-bold">Admin</p>
+            </div>
+            <!-- Отзыв 3 -->
+            <div class="min-w-[300px] bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md">
+                <p class="text-gray-600 dark:text-gray-300">"Сайт стал работать быстрее после SEO-оптимизации."</p>
+                <p class="mt-4 font-bold">Admin</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="container mx-auto p-4 mt-20" id="contact-form">
+    <h1 class="text-3xl font-bold text-center mb-8">Свяжитесь со мной</h1>
+    <form class="max-w-lg mx-auto bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+        <!-- Поле для номера телефона или Telegram -->
+        <div class="mb-4">
+            <label for="contact" class="block text-sm font-medium mb-2">Ваш номер телефона или Telegram:</label>
+            <input
+                    type="text"
+                    id="contact"
+                    name="contact"
+                    placeholder="+7 (999) 999-99-99 или @username"
+                    class="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white"
+                    required
+            >
+        </div>
+
+        <!-- Поле для сообщения -->
+        <div class="mb-4">
+            <label for="message" class="block text-sm font-medium mb-2">Какие услуги вам нужны?</label>
+            <textarea
+                    id="message"
+                    name="message"
+                    rows="4"
+                    placeholder="Опишите, какие услуги вам нужны..."
+                    class="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white"
+                    required
+            ></textarea>
+        </div>
+
+        <!-- Кнопка отправки -->
+        <div class="text-center">
+            <button
+                    type="submit"
+                    class="px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            >
+                Отправить
+            </button>
+        </div>
+    </form>
+</div>
+
+<!-- Футер -->
+<footer class="py-8 bg-gray-800 text-white mt-40">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+            <!-- Логотип -->
+            <div class="text-2xl font-bold">
+                <img src="assets/images/logo/prog.atyrau.png" width="130"  alt="Здесь логотип сайта">
+            </div>
+            <!-- Навигация -->
+            <nav class="flex space-x-6 mb-4 md:mb-0">
+                <a href="#" class="hover:text-gray-400">Главная</a>
+                <a href="#services" class="hover:text-gray-400">Услуги</a>
+                <a href="#reviews" class="hover:text-gray-400">Отзывы</a>
+                <a href="#contact" class="hover:text-gray-400">Контакты</a>
+            </nav>
+            <!-- Социальные сети -->
+            <div class="flex space-x-4">
+                <a href="https://www.instagram.com/prog.atyrau?igsh=cXQ5MWc0anU2NTVh" target="_blank" class="hover:text-gray-400 fa fa-instagram"></a>
+                <a href="https://t.me/dada_ishpe" target="_blank" class="hover:text-gray-400 fa fa-telegram"></a>
+            </div>
+        </div>
+        <!-- Авторские права -->
+        <div class="text-center mt-8 text-gray-400">
+            &copy; prog-atyrau. Все права защищены. 2025
+        </div>
+    </div>
+</footer>
+
+<!-- Скрипт для смены темы -->
+<script>
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const htmlElement = document.documentElement;
+
+    themeToggleBtn.addEventListener('click', () => {
+        htmlElement.classList.toggle('dark');
+    });
+
+//     Telegram API POST FORM
+
+    const form = document.querySelector('form');
+    const botToken = '7912338279:AAFerTvFT5ESOfEI5Qw60leEFnLmxCHAzIE'; // Замените на токен вашего бота
+    const chatId = '7117269261'; // Замените на ваш chat_id
+
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        const contact = form.contact.value;
+        const message = form.message.value;
+
+        const text = `Новый запрос:\nКонтакт: ${contact}\nСообщение: ${message}`;
+
+        try {
+            const response = await fetch(
+                `https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(text)}`
+            );
+            if (response.ok) {
+                alert('Сообщение отправлено!');
+                form.reset();
+            } else {
+                alert('Ошибка при отправке сообщения.');
+            }
+        } catch (error) {
+            console.error('Ошибка:', error);
+            alert('Ошибка при отправке сообщения.');
+        }
+    });
+</script>
+</body>
+</html>
